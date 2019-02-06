@@ -1,4 +1,5 @@
 library (dplyr)
+library(tidyverse)
 library(dslabs)
 library (caret)
 
@@ -28,9 +29,20 @@ mean(y == y_hat) #accuracy
 
 #doing a plot of accuracy vs. different cutoffs (height of reference)
 #from the training set we obtain the maximum accuracy of 83.6 with 64.5 in
-best_cutoff <- 64.5 #cutoff[which.max(accuracy)]
+cutoff <- seq(61, 70)
+accuracy <- map_dbl(cutoff, function(x){
+  y_hat <- ifelse(train_set$height < x, "Male", "Female") %>%
+    factor(levels = levels(test_set$sex))
+  1 - mean(y_hat == train_set$sex)
+})
+accuracy
+max(accuracy)
+best_cut <- cutoff[which.max(accuracy)]
+best_cut
+
+#now that we know the best cutoff value we use it to get the max accuracy
+best_cutoff <- 65 #cutoff[which.max(accuracy)]
 y_hat <- ifelse(test_set$height > best_cutoff, "Male", "Female") %>%
   factor(levels = levels(test_set$sex))
 y_hat <- factor(y_hat)
-mean(y_hat == test_set$sex) #accuracy
-
+mean(y_hat == test_set$sex)

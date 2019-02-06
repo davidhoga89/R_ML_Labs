@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549430457793.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2158785705",
+    "id" : "D8856D7E",
+    "lastKnownWriteTime" : 1549430715,
+    "last_content_update" : 1549430715503,
+    "path" : "~/Documents/Docs/Data Science/R/Projects/Machine Learning/mnistexample.R",
+    "project_path" : "mnistexample.R",
+    "properties" : {
+        "cursorPosition" : "7,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

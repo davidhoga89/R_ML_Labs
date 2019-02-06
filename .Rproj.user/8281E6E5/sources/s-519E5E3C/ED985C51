@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549426094617.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "ED985C51",
+    "lastKnownWriteTime" : 1544422180,
+    "last_content_update" : 1544422180,
+    "path" : "~/Documents/Docs/Data Science/R/Projects/Machine Learning/Lab1ML.R",
+    "project_path" : "Lab1ML.R",
+    "properties" : {
+        "cursorPosition" : "35,0",
+        "scrollLine" : "18"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

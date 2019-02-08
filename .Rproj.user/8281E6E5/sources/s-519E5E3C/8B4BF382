@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "2026332007",
     "id" : "8B4BF382",
-    "lastKnownWriteTime" : 1549594207,
-    "last_content_update" : 1549594207,
+    "lastKnownWriteTime" : 1549601908,
+    "last_content_update" : 1549601908853,
     "path" : "~/Documents/Docs/Data Science/R/Projects/Machine Learning/1ML_Heights&Sex_predictor.R",
     "project_path" : "1ML_Heights&Sex_predictor.R",
     "properties" : {
-        "cursorPosition" : "4,0",
-        "scrollLine" : "0"
+        "cursorPosition" : "112,0",
+        "scrollLine" : "94"
     },
     "relative_order" : 1,
     "source_on_save" : false,

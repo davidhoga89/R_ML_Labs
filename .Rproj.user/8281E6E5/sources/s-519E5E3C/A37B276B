@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549601910943.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2044816524",
+    "id" : "A37B276B",
+    "lastKnownWriteTime" : 1549602365,
+    "last_content_update" : 1549602365300,
+    "path" : "~/Documents/Docs/Data Science/R/Projects/Machine Learning/1ML_excercise.R",
+    "project_path" : "1ML_excercise.R",
+    "properties" : {
+        "cursorPosition" : "14,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -99,3 +99,16 @@ best_cutoff2
 y_hat <- ifelse(test_set$height > best_cutoff2, "Male", "Female") %>%
   factor(levels = levels(test_set$sex))
 confusionMatrix(data = y_hat, reference = test_set$sex)
+
+#prevalence matters in practice
+
+#ROC and precision-recall curves
+cutoffs <- c(50, seq(60,75), 80)
+height_cutoff <- map_df(cutoffs, function(x){
+  y_hat <-  ifelse(test_set$height > x, "Male", "Female") %>%
+    factor(levels = c("Female","Male"))
+  list(method = "Height Cutoff",
+       FPR = 1 - specificity(y_hat, test_set$sex),
+       TPR = sensitivity(y_hat, test_set$sex))
+})
+

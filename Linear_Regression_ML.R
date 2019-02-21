@@ -14,8 +14,8 @@ train_set <- galton_heights %>% slice(-test_index)
 test_set <- galton_heights %>% slice(test_index)
 
 avg_son <- mean(train_set$son)
-R_sq <- mean((avg_son - test_set$son)^2)
-
+R_sq <- mean((test_set$son - avg_son)^2)
+R_sq
 fit <- lm(son ~ father, data = train_set) #predictor function
 fit$coef
 #(Intercept)      father 
@@ -34,24 +34,29 @@ n <- 100
 Sigma <- 9*matrix(c(1.0, 0.5, 0.5, 1.0), 2, 2)
 dat <- MASS::mvrnorm(n = 100, c(69, 69), Sigma) %>%
   data.frame() %>% setNames(c("x", "y"))
-
+results <- {}
+i <- 1
 predictions <- function(){
   set.seed(1)
   n <- 100
   Sigma <- 9*matrix(c(1.0, 0.5, 0.5, 1.0), 2, 2)
   dat <- MASS::mvrnorm(n = 100, c(69, 69), Sigma) %>%
     data.frame() %>% setNames(c("x", "y"))
+  results <- {}
+  i <- 1
   y2 <- dat$y
   test_index2 <- createDataPartition(y2, times = 1, p = 0.5, list = FALSE)
   train_set2 <- dat %>% slice(-test_index2)
   test_set2 <- dat %>% slice(test_index2)
   fit2 <- lm(y ~ x, data = train_set2)
   y_hat2 <- predict(fit2, test_set2)
-  R_squared <- mean((y_hat2 - test_set2$y)^2)
-  results
-  #results[i] <- R_squared 
-  #i <- i+1
+  R_squared <- mean((test_set2$y - y_hat2)^2)
+  print(R_squared)
+  results[i] <- R_squared 
+  i <- i+1
 }
+predictions()
+
 
 replicate(100,predictions, simplify = results)
 
